@@ -4,19 +4,19 @@
 
 This tool will make requests similar to `https://some-aem-website.com/bin/querybuilder.json?path=/etc&type=image&nodename=*&p.limit=100&p.offset=0` in order to write directory listing to file. 
 
-### Installation:
+### Installation
 ```
 git clone https://github.com/afinepl/aem-tools.git
 cd aem-tools
 pip3 install -r requirements.txt
 ```
 
-### Running script with default settings: 
+### Running script with default settings 
 ```
 python3 ./querybuilder.py https://some-aem-website.com
 ```
 
-### Example of usage with more complex settings:
+### Example of usage with more complex settings
 
 In order to match your requirements, it is recommended to firstly make a manual request, look at the results and decide which options should be changed by using arguments of a script. Especially, types which can change often are `--ftype` and `--extract`. 
 
@@ -24,7 +24,7 @@ In order to match your requirements, it is recommended to firstly make a manual 
 python3 ./querybuilder.py https://some-aem-website.com --path "/etc" --ftype "nt:file" --tries 1 --step 1000 --extract "jcr:path"
 ```
 
-## Docs
+### Docs
 ```
 python3 ./querybuilder.py -h
 
